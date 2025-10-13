@@ -1,0 +1,5 @@
+com/loan/service/LocalFileStorageService.class
+com/loan/form/LoanApplicationForm.class
+com/loan/service/LoanEventPublisher.class
+com/loan/form/LoanController.class
+com/loan/Application.class

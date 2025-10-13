@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        loanSubmit-out-0:
+          destination: loans/originationservices/application/submitted/>
+      binders:
+        solace-binder:
+          type: solace
+          environment:
+            solace:
+              java:
+                host: 'tcps://mr-connection-1zlyvzw422t.messaging.solace.cloud:55443'
+                msgVpn: annasamplebrokerservice
+                clientUsername: solace-cloud-client
+                clientPassword: ekcr4bljrku5pusroecsmqmcub
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+app:
+ uploads:
+  base-dir: "${BASE_DIR}"

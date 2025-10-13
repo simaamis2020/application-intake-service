@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Application Submitted</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#f8fafc; margin:0; }
+    .container { max-width: 640px; margin: 40px auto; background: #fff; padding: 28px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,.05); }
+    h1 { margin: 0 0 16px; font-size: 26px; }
+    .item { margin:6px 0; }
+    .item span { color:#334; }
+    a { color:#0f62fe; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thanks — your application was submitted!</h1>
+    <div class="item"><strong>Name:</strong> <span th:text="${form.firstName} + ' ' + ${form.lastName}"></span></div>
+    <div class="item"><strong>Email:</strong> <span th:text="${form.email}"></span></div>
+    <div class="item"><strong>Phone:</strong> <span th:text="${form.phone}"></span></div>
+    <div class="item"><strong>Amount:</strong> $<span th:text="${#numbers.formatDecimal(form.amount, 1, 'COMMA', 2, 'POINT')}"></span></div>
+
+    <p style="margin-top:18px;"><a th:href="@{/apply}">Submit another application</a></p>
+  </div>
+</body>
+</html>
