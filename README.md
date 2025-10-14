@@ -10,5 +10,18 @@ A Java Spring Boot service for initial loan application intake.
 - Publishes loan submitted event to solace cloud.
 
 ## How to run
-mvn clean package
-java -jar target/application-intake-service-0.1.0.jar
+- Update Configuration
+
+  Open src/main/resources/application.yml.
+
+Change Solace connection variables (host, msgVpn, clientUsername, clientPassword) to match your environment.
+Change file upload directory to match yours
+
+ - Build the Project
+
+   mvn clean install -DskipTests
+
+
+ - Run the Application
+
+   mvn spring-boot:run
