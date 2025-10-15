@@ -1,3 +1,5 @@
+![Arcghitecture Diagram] https://www.figma.com/board/lUSLTNd6bkNYCwGmHZawGJ/Loan-Processing-Flow-with-Solace?node-id=0-1&t=vbeEO5UROfnxwhhf-1
+
 
 # Application Intake Service
 
